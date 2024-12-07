@@ -1,41 +1,29 @@
 import React from 'react';
 import '../styles/Features.css';
 
-const features = [
-  {
-    title: 'Flexible Working Hours',
-    description: 'Work on your schedule with no fixed timing.',
-    image: '/images/flexible-hours.jpg',
-  },
-  {
-    title: 'High Earning Opportunity',
-    description: 'Earn attractive commissions.',
-    image: '/images/earn-commissions.jpg',
-  },
-  {
-    title: 'Independent Business',
-    description: 'Be your own boss with LIC.',
-    image: '/images/independent-business.jpg',
-  },
-  {
-    title: 'Work from Home',
-    description: 'Work conveniently from home.',
-    image: '/images/work-from-home.jpg',
-  },
-];
+const Features = () => {
+  const features = [
+    { title: "Life Insurance", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "Recognition & Rewards", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "Housing Loan", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "Interest Free Car Adv", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "Flexible working hours", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "High earning opportunities", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "Independent business", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+    { title: "Work from home", description: "Lorem ipsum dolor sit amet.", dimensions: "200x150" },
+  ];
 
-function Features() {
   return (
-    <div className="features">
+    <div className="content">
       {features.map((feature, index) => (
-        <div className="feature-card" key={index}>
-          <img src={feature.image} alt={feature.title} />
+        <div className="card" key={index}>
+          <div className="placeholder">{feature.dimensions}</div>
           <h3>{feature.title}</h3>
           <p>{feature.description}</p>
         </div>
       ))}
     </div>
   );
-}
+};
 
 export default Features;
